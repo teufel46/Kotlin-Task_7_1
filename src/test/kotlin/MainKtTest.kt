@@ -601,9 +601,9 @@ class MainKtTest {
             null
         )
 
-        val result : Comment? = WallService.createComment(comment1)
+        val result = WallService.createComment(comment1)
 
-        assertNotNull(result)
+        assertTrue(result)
     }
 
     @Test (expected = PostNotFoundException::class)

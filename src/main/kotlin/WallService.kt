@@ -27,15 +27,13 @@ object WallService {
         }
     }
 
-    fun createComment(comment: Comment) : Comment? {
+    fun createComment(comment: Comment) : Boolean {
         for (post in posts){
-            println("post.id " + post.id + " comment.postId="+comment.postId)
             if (comment.postId == post.id) {
                 comments += comment
-                return comments.last()
+                return true
             }
-            else throw PostNotFoundException("Пост не найден")
         }
-        return null
+        throw PostNotFoundException("Пост не найден")
     }
 }
