@@ -690,7 +690,7 @@ class MainKtTest {
 
         val comment1 = Comment(
             1,
-            1,
+            2,
             2223434,
             324234234,
             "text comment 1",
